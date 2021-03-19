@@ -1,6 +1,7 @@
 import { expect, test } from '@jest/globals';
 import {
-  writeInCellMOCK, drawResultMOCK, MOCKBoard, checkVictoryMOCK, playerMovementMOCK, playerUpdateMOCK,
+  writeInCellMOCK,
+  drawResultMOCK, MOCKBoard, checkVictoryMOCK, playerMovementMOCK, playerUpdateMOCK,
 } from '../scripts/mockFucntions';
 
 const player1 = { name: 'Delta', token: 'X' };
@@ -70,7 +71,7 @@ test('The function checks for the victory condition depending on the board state
 });
 
 test('The function will update the player that is currently playing', () => {  
-  expect(playerUpdateMOCK(currentPlayer,player1,player2)).toBe(player2);
+  expect(playerUpdateMOCK(currentPlayer, player1, player2)).toBe(player2);
 });
 
 test('The function will check if the movement of the player is valid', () => {
@@ -80,17 +81,17 @@ test('The function will check if the movement of the player is valid', () => {
 
 test('The function will check if the movement of the player is valid, this time the movement will be invalid', () => {
   board.cleanBoard();
-  board.updateBoard(1,1,'0');
+  board.updateBoard(1, 1, '0');
   expect(playerMovementMOCK(1, 1, player1, true, board)).toBe('Invalid Movement, try again.');
 });
 
 test('The function will check if the movement of the player is valid, this time the movement will be valid and result on a game over', () => {
   board.cleanBoard();
-  board.updateBoard(0,0,'X');
-  board.updateBoard(1,0,'X');
+  board.updateBoard(0, 0, 'X');
+  board.updateBoard(1, 0, 'X');
   expect(playerMovementMOCK(2, 0, player1, true, board)).toBe('Game over');
 });
 
 test('The function will check if is the player turn,if not it will return an error', () => {
- expect(playerMovementMOCK(2, 0, player1, false, board)).toBe('not Flagged');
+  expect(playerMovementMOCK(2, 0, player1, false, board)).toBe('not Flagged');
 });
