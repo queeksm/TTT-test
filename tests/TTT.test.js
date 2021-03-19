@@ -70,7 +70,7 @@ test('The function checks for the victory condition depending on the board state
   expect(checkVictoryMOCK(board)).toBe('DRAW');
 });
 
-test('The function will update the player that is currently playing', () => {  
+test('The function will update the player that is currently playing', () => {
   expect(playerUpdateMOCK(currentPlayer, player1, player2)).toBe(player2);
 });
 
