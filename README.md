@@ -1,15 +1,20 @@
 # TIC-TAC-TOE (Javascript)
 
 > This app is a functional TIC-TAC-TOE game, developed fully on javascript.
+> A testing suite was added for the main game logic functions of the game.
+> Many of the functions where refactored asmock functions due the weird behavior of the game logic.
 
 ## Built With
 
 - HTML
 - CSS
 - Javascript
+- NPM
+- Jest
 
 ## Live Demo
 
+Testing suite there's no live demo.
 
 
 ## Authors
